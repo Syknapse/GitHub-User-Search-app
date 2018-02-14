@@ -1,0 +1,170 @@
+body {
+    background-color: rgba(0, 255, 76, 0.486);
+    font-size: 1.5em;
+    color: rgb(28, 9, 36);
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+img {
+    border: 1px solid rgba(42, 14, 54, 0.986);
+    border-radius: 15px;
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+    text-align: center;
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto minmax(100px, auto) minmax(100px, auto) minmax(60px, auto) minmax(60px, auto) minmax(60px, auto) auto;
+    grid-gap: 15px;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas:
+    "header header header header header header"
+    "... input input input input ..."
+    "avatar avatar avatar username username username"
+    "avatar avatar avatar real-name real-name real-name"
+    "html-url html-url ... location location location"
+    "bio bio bio bio bio bio"
+    "... ... followers followers ... ..."
+    "followers-panel followers-panel followers-panel followers-panel followers-panel followers-panel";
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-color: unset;
+    }
+    .container {
+        background-color: rgba(0, 255, 76, 0.486);
+        border: 3px solid rgba(42, 14, 54, 0.986);
+        border-radius: 15px;
+        margin: 5px auto;
+        padding: 5px;
+        transition: 0.5s;
+    }
+}
+
+.titles {
+    color: firebrick;
+}
+
+h1 {
+    grid-area: header;
+}
+
+input {
+    grid-area: input;
+    width:100%;
+    max-width:500px;
+}
+
+#user-box {
+    grid-area: username;
+    justify-self: start;
+    align-self: end;
+    text-align: left;
+}
+
+#name-box {
+    grid-area: real-name;
+    justify-self: start;
+    align-self: start;
+    text-align: left;
+}
+
+#avatar {
+    grid-area: avatar;
+    max-width: 100%;
+    justify-self: start;
+}
+
+#location-box {
+    grid-area: location;
+    justify-self: start;
+    text-align: left;
+}
+
+#bio {
+    grid-area: bio;
+}
+
+#html-url {
+    grid-area: html-url;
+    text-decoration: none;
+    color: inherit;
+    background-color: rgba(0, 255, 76, 0.2);
+    border: 1px solid rgba(42, 14, 54, 0.986);
+    border-radius: 20px;
+    transition: 0.26s;
+    width: 80%;
+}
+
+#html-url:hover {
+    background-color: rgba(0, 255, 76, 0.8);
+}
+
+#followers-box {
+    grid-area: followers;
+}
+
+#followers-panel {
+    grid-area: followers-panel;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#followers-panel p {
+    font-size: 0.8em;
+}
+
+#followers-panel img {
+    width: 20vw;
+    max-width: 250px;
+}
+
+#followers-panel div {
+    border: 1px solid rgba(42, 14, 54, 0.986);
+    border-radius: 15px;
+    background-color: rgba(0, 255, 76, 0.2);
+    margin: 3px;
+    padding: 3px;
+}
+
+#followers-panel a {
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+#followers-panel div:hover {
+    background-color: rgba(0, 255, 76, 0.8);
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        font-size: 1em;
+        transition: 0.5s;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    .container {
+        grid-template-rows: auto auto minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) auto;
+        grid-template-areas:
+            "header header header header header header"
+            "... input input input input ..."
+            "avatar avatar avatar username username username"
+            "avatar avatar avatar real-name real-name real-name"
+            "html-url html-url html-url location location location"
+            "bio bio bio bio bio bio"
+            "... followers followers followers followers ..."
+            "followers-panel followers-panel followers-panel followers-panel followers-panel followers-panel";
+    }
+    input {
+        min-width: 170px;
+    }
+}
