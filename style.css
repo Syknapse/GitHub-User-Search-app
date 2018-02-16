@@ -59,6 +59,8 @@ input {
     grid-area: input;
     width:100%;
     max-width:500px;
+    height: 40px;
+    font-size: 0.9em;
 }
 
 #user-box {
@@ -94,12 +96,13 @@ input {
 #html-url {
     grid-area: html-url;
     text-decoration: none;
-    color: inherit;
+    color: firebrick;
+    width: 80%;
+    padding: 2px;
     background-color: rgba(0, 255, 76, 0.2);
     border: 1px solid rgba(42, 14, 54, 0.986);
     border-radius: 20px;
     transition: 0.26s;
-    width: 80%;
 }
 
 #html-url:hover {
@@ -118,6 +121,7 @@ input {
 }
 
 #followers-panel p {
+    color: firebrick;
     font-size: 0.8em;
 }
 

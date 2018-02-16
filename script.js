@@ -1,6 +1,13 @@
 const input = document.getElementById('user-input');
+////
+input.addEventListener('keydown', function(event) {
+  if(event.keyCode === 13){
+    search();
+  }
 
-input.addEventListener('input', function(event) {
+});
+
+function search() {
   let githubUserName = event.target.value;
   console.log(githubUserName);
   fetch(`https://api.github.com/users/${githubUserName}`)
@@ -41,6 +48,16 @@ input.addEventListener('input', function(event) {
         followerLink.appendChild(followerAvatar);
     }
   })
+}
 
-});
-
+function reset() {
+  input.value = '';
+  document.getElementById('followers-panel').innerText = '';
+  document.getElementById('username').innerText = '';
+  document.getElementById('real-name').innerText = '';
+  document.getElementById('avatar').setAttribute('src', 'http://via.placeholder.com/462x462/B2FFC9?text=Find+a+GitHub+user');
+  document.getElementById('location').innerText = '';
+  document.getElementById('bio').innerText = '';
+  document.getElementById('html-url').setAttribute('href', '');
+  document.getElementById('followers').innerText = '';
+}
