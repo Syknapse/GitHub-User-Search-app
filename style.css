@@ -67,6 +67,7 @@ input {
     max-width:500px;
     height: 40px;
     font-size: 0.9em;
+    text-align: center;
     cursor: text;
     border: 2px solid rgba(42, 14, 54, 0.986);
     border-radius: 15px;
@@ -161,6 +162,15 @@ input {
 
 @media screen and (max-width: 450px) {
     body {
+        background-image: unset;
+        background: rgba(255,106,149,1);
+        background: -moz-linear-gradient(top, rgba(255,106,149,1) 0%, rgba(241,111,92,1) 54%, rgba(240,198,93,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,106,149,1)), color-stop(54%, rgba(241,111,92,1)), color-stop(100%, rgba(240,198,93,1)));
+        background: -webkit-linear-gradient(top, rgba(255,106,149,1) 0%, rgba(241,111,92,1) 54%, rgba(240,198,93,1) 100%);
+        background: -o-linear-gradient(top, rgba(255,106,149,1) 0%, rgba(241,111,92,1) 54%, rgba(240,198,93,1) 100%);
+        background: -ms-linear-gradient(top, rgba(255,106,149,1) 0%, rgba(241,111,92,1) 54%, rgba(240,198,93,1) 100%);
+        background: linear-gradient(to bottom, rgba(255,106,149,1) 0%, rgba(241,111,92,1) 54%, rgba(240,198,93,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6a95', endColorstr='#f0c65d', GradientType=0 );
         transition: 0.5s;
     }
     h1 {
