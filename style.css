@@ -150,23 +150,26 @@ input {
 
 @media screen and (max-width: 450px) {
     body {
-        font-size: 1em;
+        /* font-size: 1em; */
         transition: 0.5s;
     }
     h1 {
         font-size: 1.4em;
     }
     .container {
-        grid-template-rows: auto auto minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
         grid-template-areas:
-            "header header header header header header"
-            "... input input input input ..."
-            "avatar avatar avatar username username username"
-            "avatar avatar avatar real-name real-name real-name"
-            "html-url html-url html-url location location location"
-            "bio bio bio bio bio bio"
-            "... followers followers followers followers ..."
-            "followers-panel followers-panel followers-panel followers-panel followers-panel followers-panel";
+        "header"
+        "input"
+        "username"
+        "real-name"
+        "avatar"
+        "location"
+        "html-url"
+        "bio"
+        "followers"
+        "followers-panel";
     }
     input {
         min-width: 170px;

@@ -1,16 +1,16 @@
 const input = document.getElementById('user-input');
-////
-input.addEventListener('keydown', function(event) {
-  if(event.keyCode === 13){
+
+input.addEventListener('keydown', function() {
+  if(event.keyCode === 13 || event.keyCode === 9){
     search();
   }
 
 });
 
 function search() {
-  let githubUserName = event.target.value;
-  console.log(githubUserName);
-  fetch(`https://api.github.com/users/${githubUserName}`)
+  reset()
+  console.log(input.value);
+  fetch(`https://api.github.com/users/${input.value}`)
     .then(response => response.json())
     .then(json => {
       console.log(json);
@@ -26,7 +26,7 @@ function search() {
         document.getElementById('followers').innerText = json.followers;
       }
     })
-  fetch(`https://api.github.com/users/${githubUserName}/followers`)
+  fetch(`https://api.github.com/users/${input.value}/followers`)
   .then(response => response.json())
   .then(followers => {
     console.log(followers);
@@ -51,7 +51,6 @@ function search() {
 }
 
 function reset() {
-  input.value = '';
   document.getElementById('followers-panel').innerText = '';
   document.getElementById('username').innerText = '';
   document.getElementById('real-name').innerText = '';
