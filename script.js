@@ -1,7 +1,5 @@
 const input = document.getElementById('user-input');
 
-// input.addEventListener('input', search);
-
 input.addEventListener('keypress', function(event) {
   if(event.key === 'Enter'){
     this.blur();
@@ -19,11 +17,9 @@ input.addEventListener("focus", function(event) {
 
 function search() {
   reset()
-  console.log(input.value);
   fetch(`https://api.github.com/users/${input.value}`)
   .then(response => response.json())
   .then(json => {
-    console.log(json);
     if (json.message == 'Not Found') {
       document.getElementById('username').innerText = 'User Not Found';
     } else {

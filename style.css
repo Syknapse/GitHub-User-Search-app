@@ -160,6 +160,21 @@ input {
     background-color: rgba(178, 255, 201, 0.8);
 }
 
+footer {
+    text-align: center;
+    margin: 20px auto 25px auto;
+    font-size: 0.9em;
+}
+
+footer a {
+    text-decoration: none;
+    color: #292a38;
+}
+
+footer a:hover {
+    background-color: rgba(178, 255, 201, 0.8);
+}
+
 @media screen and (max-width: 450px) {
     body {
         background-image: unset;
