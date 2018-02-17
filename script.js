@@ -1,6 +1,6 @@
 const input = document.getElementById('user-input');
 
-input.addEventListener('input', search);
+// input.addEventListener('input', search);
 
 input.addEventListener('keypress', function(event) {
   if(event.key === 'Enter'){
@@ -9,6 +9,7 @@ input.addEventListener('keypress', function(event) {
 });
 
 input.addEventListener('blur', function(event) {
+  search();
   event.target.style.background = "";
 });
 
