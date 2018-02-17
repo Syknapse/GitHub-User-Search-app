@@ -1,19 +1,25 @@
 const input = document.getElementById('user-input');
 
-input.addEventListener('keydown', function() {
-  if(event.keyCode === 13 || event.keyCode === 9){
-    search();
+input.addEventListener('keypress', function() {
+  if(event.key === 'Enter'){
+    this.blur();
   }
+});
 
+input.addEventListener('blur', function() {
+  input.addEventListener('change', search);
+  event.target.style.background = "";
+});
+
+input.addEventListener("focus", function() {
+  event.target.style.background = "rgba(178, 255, 201, 0.5)";
 });
 
 function search() {
   reset()
-  console.log(input.value);
   fetch(`https://api.github.com/users/${input.value}`)
     .then(response => response.json())
     .then(json => {
-      console.log(json);
       if (json.message == 'Not Found') {
         document.getElementById('username').innerText = 'User Not Found';
       } else {
@@ -29,7 +35,6 @@ function search() {
   fetch(`https://api.github.com/users/${input.value}/followers`)
   .then(response => response.json())
   .then(followers => {
-    console.log(followers);
     for (let i = 0; i < followers.length; i++) {
         const followersPanel = document.getElementById('followers-panel');
         let followerDetails = document.createElement('div');
@@ -41,7 +46,6 @@ function search() {
         followerLink.setAttribute('href', followers[i].html_url);
         followerLink.setAttribute('target', '_blank');
         followerAvatar.setAttribute('src', followers[i].avatar_url);
-        // followersPanel.innerText = '';
         followersPanel.appendChild(followerDetails);
         followerDetails.appendChild(followerLink);
         followerLink.appendChild(followerName);

@@ -1,13 +1,19 @@
 body {
-    background-color: rgba(0, 255, 76, 0.486);
+    font-family: 'Ubuntu', sans-serif;
     font-size: 1.5em;
     color: rgb(28, 9, 36);
     box-sizing: border-box;
     transition: 0.5s;
+
+    background-color: #ff6a95;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%23ff6a95' width='11' height='11'/%3E%3Crect fill='%23ff6c93' x='10' width='11' height='11'/%3E%3Crect fill='%23ff6f92' y='10' width='11' height='11'/%3E%3Crect fill='%23ff7190' x='20' width='11' height='11'/%3E%3Crect fill='%23ff748f' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%23ff768e' y='20' width='11' height='11'/%3E%3Crect fill='%23ff798c' x='30' width='11' height='11'/%3E%3Crect fill='%23ff7c8b' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23ff7e8a' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%23ff8189' y='30' width='11' height='11'/%3E%3Crect fill='%23ff8488' x='40' width='11' height='11'/%3E%3Crect fill='%23ff8787' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23ff8986' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23ff8c86' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23ff8f85' y='40' width='11' height='11'/%3E%3Crect fill='%23ff9185' x='50' width='11' height='11'/%3E%3Crect fill='%23ff9484' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%23ff9784' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%23ff9a83' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%23ff9c83' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%23ff9f83' y='50' width='11' height='11'/%3E%3Crect fill='%23ffa283' x='60' width='11' height='11'/%3E%3Crect fill='%23ffa583' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%23ffa783' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%23ffaa84' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%23ffad84' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%23ffb085' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%23ffb285' x='70' width='11' height='11'/%3E%3Crect fill='%23ffb586' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23ffb887' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23ffba88' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23ffbd89' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23ffbf8a' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23ffc28b' x='80' width='11' height='11'/%3E%3Crect fill='%23ffc58c' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23ffc78e' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23ffca8f' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23ffcc91' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23ffcf93' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23ffd194' x='90' width='11' height='11'/%3E%3Crect fill='%23ffd496' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23ffd698' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23ffd99a' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23ffdb9c' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23ffdd9f' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23ffe0a1' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23ffe2a3' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23ffe5a6' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23ffe7a8' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23ffe9ab' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23ffebae' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23ffeeb0' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23fff0b3' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23fff2b6' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23fff4b9' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23fff7bc' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23fff9bf' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23fffbc2' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23fffdc5' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23ffffc8' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 img {
-    border: 1px solid rgba(42, 14, 54, 0.986);
+    border: 3px solid rgba(42, 14, 54, 0.986);
     border-radius: 15px;
 }
 
@@ -35,10 +41,10 @@ img {
 
 @media screen and (min-width: 1201px) {
     body {
-        background-color: unset;
+        /* background-color: unset; */
     }
     .container {
-        background-color: rgba(0, 255, 76, 0.486);
+        /* background-color: rgba(0, 255, 76, 0.2); */
         border: 3px solid rgba(42, 14, 54, 0.986);
         border-radius: 15px;
         margin: 5px auto;
@@ -48,7 +54,7 @@ img {
 }
 
 .titles {
-    color: firebrick;
+    color: #292a38;
 }
 
 h1 {
@@ -61,6 +67,10 @@ input {
     max-width:500px;
     height: 40px;
     font-size: 0.9em;
+    cursor: text;
+    border: 2px solid rgba(42, 14, 54, 0.986);
+    border-radius: 15px;
+    padding: 2px 5px;
 }
 
 #user-box {
@@ -96,17 +106,17 @@ input {
 #html-url {
     grid-area: html-url;
     text-decoration: none;
-    color: firebrick;
+    color: #292a38;
     width: 80%;
     padding: 2px;
-    background-color: rgba(0, 255, 76, 0.2);
-    border: 1px solid rgba(42, 14, 54, 0.986);
+    background-color: rgba(0, 34, 255, 0.07);
+    border: 2px solid rgba(42, 14, 54, 0.986);
     border-radius: 20px;
     transition: 0.26s;
 }
 
 #html-url:hover {
-    background-color: rgba(0, 255, 76, 0.8);
+    background-color: rgba(178, 255, 201, 0.8);
 }
 
 #followers-box {
@@ -121,19 +131,20 @@ input {
 }
 
 #followers-panel p {
-    color: firebrick;
+    color: #292a38;
     font-size: 0.8em;
 }
 
 #followers-panel img {
     width: 20vw;
     max-width: 250px;
+    border: 2px solid rgba(42, 14, 54, 0.986);
 }
 
 #followers-panel div {
-    border: 1px solid rgba(42, 14, 54, 0.986);
+    border: 2px solid rgba(42, 14, 54, 0.986);
     border-radius: 15px;
-    background-color: rgba(0, 255, 76, 0.2);
+    background-color: rgba(0, 34, 255, 0.07);
     margin: 3px;
     padding: 3px;
 }
@@ -145,12 +156,11 @@ input {
 }
 
 #followers-panel div:hover {
-    background-color: rgba(0, 255, 76, 0.8);
+    background-color: rgba(178, 255, 201, 0.8);
 }
 
 @media screen and (max-width: 450px) {
     body {
-        /* font-size: 1em; */
         transition: 0.5s;
     }
     h1 {
@@ -173,5 +183,22 @@ input {
     }
     input {
         min-width: 170px;
+    }
+    #user-box {
+        justify-self: center;
+        align-self: unset;
+        text-align: unset;
+    }
+    #name-box {
+        justify-self: center;
+        align-self: unset;
+        text-align: unset;
+    }
+    #avatar {
+        justify-self: center;
+    }
+    #location-box {
+        justify-self: center;
+        text-align: unset;
     }
 }
